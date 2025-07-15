@@ -1,0 +1,181 @@
+
+html
+Copiar
+Editar
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Portfólio</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #4a90e2;
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #4a90e2;
+      border-bottom: 2px solid #4a90e2;
+      padding-bottom: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #e7f0ff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #2c6cdf;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Contato */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    form button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background: #357ab7;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Filipi Sueira</h1>
+    <p>Desenvolvedor Web </p>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Olá! Eu sou um desenvolvedor Web. Tenho experiência com HTML, CSS, JavaScript e outras tecnologias para transformar ideias em realidade.</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>FindTrash</h3>
+        <p>Aplicativo para ajudar pessoas com o acumulo de lixo nas ruas.</p>
+      </div>
+      <div class="project-card">
+        <h3>Como funciona ?</h3>
+        <p>Através do FindTrash o usuário faz a denúncia de como está a quantidade de lixo naquela região, e assim a prefeitura irá até o lugar para fazer a limpeza.</p>
+      </div>
+      <div class="project-card">
+        <h3>Eficácia</h3>
+        <p>A eficácia do FindTrash vai depender do esforço e da determinação da prefeitura, se não as pessoas vão estar fazendo as denuncias para nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Filipi Sueira. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
